@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>Student Predictor</h2>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/predict">Predict</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Enter Student Details</h1>
+
+    <form action="/predict" method="POST" class="form-box">
+
+        <div class="input-group">
+            <label>Study Hours</label>
+            <input type="number" step="any" name="study_hours" required>
+        </div>
+
+        <div class="input-group">
+            <label>Attendance (%)</label>
+            <input type="number" step="any" name="attendance" required>
+        </div>
+
+        <div class="input-group">
+            <label>Sleep Hours</label>
+            <input type="number" step="any" name="sleep_hours" required>
+        </div>
+
+        <div class="input-group">
+            <label>Screen Time</label>
+            <input type="number" step="any" name="screen_time" required>
+        </div>
+
+        <div class="input-group">
+            <label>Subject Difficulty (1-10)</label>
+            <input type="number" step="any" name="subject_difficulty" required>
+        </div>
+
+        <button type="submit">Predict Marks</button>
+    </form>
+
+    {% if result %}
+        <h2 class="result">Predicted Marks: {{ result }}</h2>
+    {% endif %}
+</div>
+
+</body>
+</html>

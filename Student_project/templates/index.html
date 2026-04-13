@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>Student Predictor</h2>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/predict">Predict</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>🎓 Student Marks Predictor</h1>
+
+    <p>
+        An AI-powered system that predicts student performance based on daily habits 
+        like study time, attendance, sleep, and more.
+    </p>
+
+    <p>
+        Improve your academic performance by understanding how your routine affects your results.
+    </p>
+
+    <!-- FIXED BUTTON -->
+    <form action="/predict" method="GET">
+        <button type="submit">Start Prediction 🚀</button>
+    </form>
+
+</div>
+
+</body>
+</html>
