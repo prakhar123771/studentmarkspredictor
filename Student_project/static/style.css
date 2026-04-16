@@ -4,13 +4,32 @@ body {
     background: linear-gradient(to right, #4facfe, #00f2fe);
 }
 
-nav {
-    background: #333;
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
     color: white;
-    padding: 15px;
-    text-align: center;
+    padding: 15px 30px;
 }
 
+.navbar h2 {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #4facfe;
+}
+
+/* CONTAINER */
 .container {
     width: 100%;
     max-width: 500px;
@@ -21,10 +40,16 @@ nav {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 
+/* HEADINGS */
 h1 {
     text-align: center;
 }
 
+h3 {
+    text-align: center;
+}
+
+/* FORM */
 .form-box {
     display: flex;
     flex-direction: column;
@@ -42,8 +67,11 @@ h1 {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
+/* BUTTON */
 button {
     padding: 10px;
     background: #4facfe;
@@ -58,28 +86,29 @@ button:hover {
     background: #0077ff;
 }
 
+/* RESULT */
 .result {
     text-align: center;
     margin-top: 20px;
     color: green;
-}
-/* NAVBAR FIX */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #222;
-    color: white;
-    padding: 15px 30px;
+    font-size: 22px;
 }
 
-.nav-links a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
+/* TEXT */
+p {
+    text-align: center;
     font-weight: bold;
 }
 
-.nav-links a:hover {
-    color: #4facfe;
+/* WARNING COLORS */
+p:contains("High Risk") {
+    color: red;
+}
+
+p:contains("Moderate Risk") {
+    color: orange;
+}
+
+p:contains("Low Risk") {
+    color: green;
 }
