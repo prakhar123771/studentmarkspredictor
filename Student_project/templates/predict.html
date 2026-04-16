@@ -7,7 +7,7 @@
 <body>
 
 <nav class="navbar">
-    <h2>Student Predictor</h2>
+    <h2>Early Warning System</h2>
     <div class="nav-links">
         <a href="/">Home</a>
         <a href="/predict">Predict</a>
@@ -46,11 +46,17 @@
             <input type="number" step="any" name="subject_difficulty" required>
         </div>
 
-        <button type="submit">Predict Marks</button>
+        <button type="submit">Analyze Performance</button>
     </form>
 
     {% if result %}
         <h2 class="result">Predicted Marks: {{ result }}</h2>
+
+        <h3>⚠️ Warning:</h3>
+        <p>{{ warning }}</p>
+
+        <h3>📘 Suggestion:</h3>
+        <p>{{ suggestion }}</p>
     {% endif %}
 </div>
 
